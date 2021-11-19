@@ -7,10 +7,11 @@ import { useLocation } from 'react-router-dom';
 const Chat = (props) => {
   const location = useLocation();
   useEffect(() => {
-    if (location.pathname === '/dialog'){
-      const dialogId = location.pathname.split('/')[1];
-      props.setCurrentDialogId(dialogId);
-    }
+      console.log(location.pathname.includes('/chat/dialog'))
+      if(location.pathname.includes('/chat/dialog')){
+          const dialogId = location.pathname.split('/')[3];
+          props.setCurrentDialogId(dialogId);
+      }
   }, [location.pathname]);
   return (
     <div>

@@ -5,7 +5,7 @@ const initialState = {
   name: null,
   createdAt: null,
   updatedAt: null,
-  currentDialogId: undefined,
+  currentDialogId: '',
   dialogs: [],
 };
 const dialogReducer = (state = initialState, action) => {

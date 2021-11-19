@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-const Dialog = ({ currentDialogId, name }) => {
+const Dialog = ({id, currentDialogId, name }) => { //FIX
   return (
-    <Link to={`/dialog/${currentDialogId}`}>
+    <Link to={`/chat/dialog/${id}`}>
       <div>{name}</div>
     </Link>
   );

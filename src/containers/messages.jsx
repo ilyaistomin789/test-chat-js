@@ -5,12 +5,12 @@ import { connect } from 'react-redux';
 
 const MessagesContainer = ({ currentDialogId, fetchMessages, messages }) => {
   useEffect(() => {
-    console.log('222')
+    console.log(currentDialogId)
     if (currentDialogId) {
-      fetchMessages(currentDialogId);
+      fetchMessages(currentDialogId);//FIX
     }
-  }, [currentDialogId]);
-
+  }, [currentDialogId]);//FIX
+//we need to take currentDialog object
   if (!currentDialogId) {
     return <div>Откройте диалог</div>;
   }
@@ -29,7 +29,7 @@ const mapDispatchToProps = {
 const mapStateToProps = function (state) {
   return {
     messages: state.message.messages,
-    currentDialogId: state.dialog.currentDialogId,
+    currentDialogId: state.dialog.currentDialogId,//FIX, we need to find current dialog object by dialog id
   };
 };
 
