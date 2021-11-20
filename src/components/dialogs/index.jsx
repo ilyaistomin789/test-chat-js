@@ -4,7 +4,7 @@ const Dialogs = ({ dialogs, currentDialogId }) => {
   return (
     <div className="dialog__container">
       {dialogs.length
-        ? dialogs.map((dialog) => <Dialog key={dialog.id} name={dialog.name} currentDialogId={currentDialogId}  {...dialogs}/>)
+        ? dialogs.map((dialog) => <Dialog key={dialog.id} name={dialog.name} currentDialogId={currentDialogId}  {...dialog}/>)
         : null}
     </div>
   );

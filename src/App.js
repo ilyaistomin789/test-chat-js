@@ -7,7 +7,7 @@ function App() {
       <div className="wrapper">
         <Routes>
           <Route path={'/chat'} element={<Chat />} />
-            <Route path={'/chat/dialog/'} element={<Chat/>}/>
+            <Route path={'/chat/dialog/:id'} element={<Chat/>}/>
         </Routes>
       </div>
   );
