@@ -1,4 +1,4 @@
-import { GET_MESSAGES } from './actionTypes';
+import {ADD_MESSAGE, GET_MESSAGES} from './actionTypes';
 
 const initialState = {
   id: null,
@@ -11,6 +11,12 @@ const messageReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MESSAGES: {
       return { ...state, ...action.payload };
+    }
+    case ADD_MESSAGE:{
+      return {
+        ...state,
+        messages: [...state.messages, action.payload],
+      };
     }
     default: {
       return state;
