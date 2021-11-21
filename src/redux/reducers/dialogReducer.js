@@ -1,4 +1,4 @@
-import { GET_DIALOGS, SET_CURRENT_DIALOG_ID } from './actionTypes';
+import { ADD_DIALOG, GET_DIALOGS, SET_CURRENT_DIALOG_ID } from './actionTypes';
 
 const initialState = {
   id: null,
@@ -15,6 +15,12 @@ const dialogReducer = (state = initialState, action) => {
     }
     case SET_CURRENT_DIALOG_ID: {
       return { ...state, ...action.payload };
+    }
+    case ADD_DIALOG: {
+      return {
+        ...state,
+        dialogs: [...state.dialogs, action.payload],
+      };
     }
     default: {
       return state;

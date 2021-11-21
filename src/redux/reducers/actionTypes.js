@@ -20,3 +20,4 @@ export const GET_DIALOGS = 'GET_DIALOGS';
 export const GET_MESSAGES = 'GET_MESSAGES';
 export const SET_CURRENT_DIALOG_ID = 'SET_CURRENT_DIALOG_ID';
 export const ADD_MESSAGE = 'ADD_MESSAGE';
+export const ADD_DIALOG = 'ADD_DIALOG';

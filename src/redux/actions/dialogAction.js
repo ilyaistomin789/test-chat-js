@@ -1,4 +1,4 @@
-import { GET_DIALOGS, SET_CURRENT_DIALOG_ID } from '../reducers/actionTypes';
+import { ADD_DIALOG, GET_DIALOGS, SET_CURRENT_DIALOG_ID } from '../reducers/actionTypes';
 import { dialogApi } from '../../utils/api';
 
 export const getDialogs = (obj) => (dispatch) => {
@@ -24,3 +24,12 @@ export const setCurrentDialogId = (dialogId) => (dispatch) => {
     });
   }
 };
+
+export const addDialog = (dialog) => (dispatch) => {
+  dispatch({ type: ADD_DIALOG, payload: dialog });
+};
+export const fetchCreateDialog =
+  ({ name, partnerId }) =>
+  (dispatch) => {
+    return dialogApi.create({ name, partnerId });
+  };
